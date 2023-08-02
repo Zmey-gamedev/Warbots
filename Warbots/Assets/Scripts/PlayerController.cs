@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
             rotationStep += 1;
             rotationStep %= directions.Length;
         }
-
+        
         // Определяме целевата ротация на gun
         targetRotation = Quaternion.LookRotation(directions[rotationStep] - gun.position);
 
