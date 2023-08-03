@@ -482,7 +482,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 543450652066186573}
   smouthSpeed: 0.125
-  offset: {x: 0, y: 20, z: 0}
+  offset: {x: 0, y: 30, z: 0}
 --- !u!1 &1277014552
 GameObject:
   m_ObjectHideFlags: 0
