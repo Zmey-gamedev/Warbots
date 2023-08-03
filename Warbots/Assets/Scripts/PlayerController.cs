@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 lastMovementDirection = Vector3.forward; // Запази последната посока на движение
 
+    private CharacterController characterController;
     public Transform gun;
     private Quaternion targetRotation;
     private Quaternion initialRotation;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
 
         // Определяме първоначалната ротация на gun
         initialRotation = gun.rotation;
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical) * movementSpeed;
         rb.velocity = movement;
+
+        characterController.SimpleMove(movement);
 
         // Запазваме последната посока на движение
         if (rb.velocity != Vector3.zero)

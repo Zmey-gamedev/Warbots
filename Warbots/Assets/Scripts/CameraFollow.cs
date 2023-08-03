@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
     public Vector3 offset = new Vector3(0f, 10f, 0f);
 
-    public void FixedUpdate()
+    public void LateUpdate()
     {
         CameraBehavier();
     }
